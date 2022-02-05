@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25998F6F-C3EA-4723-BA42-D70D7C0D8101}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GESTION_DE_BANQUE</RootNamespace>
+    <AssemblyName>GESTION_DE_BANQUE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ado.cs" />
+    <Compile Include="connection.cs" />
+    <Compile Include="dbcontext.cs" />
+    <Compile Include="Etats_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etats_Client.Designer.cs">
+      <DependentUpon>Etats_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etat_Gerant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat_Gerant.Designer.cs">
+      <DependentUpon>Etat_Gerant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="super_gerant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>super_gerant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gerant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerant.Designer.cs">
+      <DependentUpon>gerant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client.Designer.cs">
+      <DependentUpon>client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inscriptionClient_child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inscriptionClient_child.Designer.cs">
+      <DependentUpon>inscriptionClient_child.cs</DependentUpon>
+    </Compile>
+    <Compile Include="les_Operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="les_Operation.Designer.cs">
+      <DependentUpon>les_Operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_le_Mot_de_Passe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_le_Mot_de_Passe.Designer.cs">
+      <DependentUpon>Modifier_le_Mot_de_Passe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operation_gerant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operation_gerant.Designer.cs">
+      <DependentUpon>operation_gerant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="retraie_child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retraie_child.Designer.cs">
+      <DependentUpon>retraie_child.cs</DependentUpon>
+    </Compile>
+    <Compile Include="super_gerant_child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="super_gerant_child.Designer.cs">
+      <DependentUpon>super_gerant_child.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transfere_child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transfere_child.Designer.cs">
+      <DependentUpon>transfere_child.cs</DependentUpon>
+    </Compile>
+    <Compile Include="virsement_child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="virsement_child.Designer.cs">
+      <DependentUpon>virsement_child.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Etats_Client.resx">
+      <DependentUpon>Etats_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat_Gerant.resx">
+      <DependentUpon>Etat_Gerant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gerant.resx">
+      <DependentUpon>gerant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client.resx">
+      <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inscriptionClient_child.resx">
+      <DependentUpon>inscriptionClient_child.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="les_Operation.resx">
+      <DependentUpon>les_Operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_le_Mot_de_Passe.resx">
+      <DependentUpon>Modifier_le_Mot_de_Passe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operation_gerant.resx">
+      <DependentUpon>operation_gerant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="retraie_child.resx">
+      <DependentUpon>retraie_child.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="super_gerant.resx">
+      <DependentUpon>super_gerant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="super_gerant_child.resx">
+      <DependentUpon>super_gerant_child.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transfere_child.resx">
+      <DependentUpon>transfere_child.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="virsement_child.resx">
+      <DependentUpon>virsement_child.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
